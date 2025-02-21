@@ -22,7 +22,8 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await fetch(`${BACKEND_URL}/api/data`);
-        const jsonData = await response.json();
+        const text = await response.text();
+        const jsonData = JSON.parse(text);
         setData(jsonData);
         setLoading(false);
       } catch (error) {
