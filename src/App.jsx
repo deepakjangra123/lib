@@ -166,19 +166,28 @@ function App() {
         throw new Error("Failed to download file");
       }
   
-      // const blob = await response.blob();
-      // const url = window.URL.createObjectURL(blob);
-      // const a = document.createElement("a");
-      // a.href = url;
-      // a.download = "library_data.json"; // Change file name if needed
-      // document.body.appendChild(a);
-      // a.click();
-      // document.body.removeChild(a);
-      // window.URL.revokeObjectURL(url);
+      // Convert response to Blob
+      const blob = await response.blob();
+  
+      // Create a URL for the Blob
+      const url = window.URL.createObjectURL(blob);
+  
+      // Create an anchor element and trigger the download
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "SSM-REGISTER-UPDATED-2024.xlsx"; // Ensure correct filename & extension
+      document.body.appendChild(a);
+      a.click();
+  
+      // Cleanup
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
+  
     } catch (error) {
       console.error("Error downloading file:", error);
     }
   };
+  
   
 
   return (
