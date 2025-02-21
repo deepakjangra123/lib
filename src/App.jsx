@@ -4,7 +4,7 @@ import { IoMdCloudDownload } from "react-icons/io";
 import { FiEdit } from "react-icons/fi";
 import { AiOutlineEdit } from "react-icons/ai";
 
-const BACKEND_URL = `statushttps://library-backend-alxn.onrender.com`
+const BACKEND_URL = `https://library-backend-alxn.onrender.com`
 
 function App() {
   const [data, setData] = useState([]);
