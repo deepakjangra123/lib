@@ -1,0 +1,274 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.5;
+  padding: 15px;
+}
+
+/* Main Title */
+h1 {
+  color: #222;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.search-container input {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.search-container input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Buttons - Advanced Styling */
+button {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Hover Effects */
+button:hover {
+  background: linear-gradient(135deg, #0056b3, #003580);
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Active (Click) Effect */
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Specific Button Colors */
+button[type="submit"] {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #1e7e34, #155724);
+}
+
+button[type="button"] {
+  background: linear-gradient(135deg, #dc3545, #b21f2d);
+}
+
+button[type="button"]:hover {
+  background: linear-gradient(135deg, #b21f2d, #8b161f);
+}
+
+/* Global Edit Button */
+.global-edit-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.global-edit-container button {
+  padding: 10px 14px;
+}
+
+.global-edit-container .active-global {
+  background: linear-gradient(135deg, #d35400, #a84300);
+}
+
+.global-edit-container .active-global:hover {
+  background: linear-gradient(135deg, #a84300, #7d3200);
+}
+
+/* List Container */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 15px auto;
+}
+
+li {
+  background: white;
+  padding: 16px;
+  margin: 8px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+li h2 {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+li p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Edit Button */
+.card_edit_button button {
+  background: #666f69; /* Solid Green */
+  padding: 12px 20px;
+  font-size: 0.85rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card_edit_button button:hover {
+  background: #1e7e34; /* Darker Green on Hover */
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Edit Forms */
+.edit-form,
+.global-edit-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.edit-form form,
+.global-edit-form form {
+  background: white;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  max-width: 90%;
+}
+
+.edit-form input,
+.global-edit-form input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button Container Below Search */
+.buttons_below {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.buttons_below button {
+  min-width: 130px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+
+  ul {
+    width: 90%;
+  }
+
+  .edit-form form,
+  .global-edit-form form {
+    width: 90%;
+  }
+
+  .buttons_below {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  .global-edit-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
